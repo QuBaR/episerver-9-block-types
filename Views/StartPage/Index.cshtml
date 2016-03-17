@@ -1,0 +1,22 @@
+﻿@using EPiServer.Editor
+@model episerver9_tutorial.Models.Pages.StartPage
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_root.cshtml";
+}
+
+
+<div class="row page-header">
+    <div class="col-md-12">
+        <h1>@Html.PropertyFor(x => x.Heading)</h1>
+        <p>@Html.PropertyFor(x => x.MainBody)</p>
+    </div>
+</div>
+
+<!-- Block Content Area -->
+@if (Model.MainContentArea != null || PageEditing.PageIsInEditMode)
+{
+    <!-- block content goes here -->
+    @Html.PropertyFor(x => x.MainContentArea)
+}

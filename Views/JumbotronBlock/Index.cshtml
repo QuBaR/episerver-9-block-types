@@ -1,0 +1,11 @@
+﻿@model episerver9_tutorial.Models.Blocks.JumbotronBlock
+
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>@Html.PropertyFor(x => x.Header)</h1>
+            <p><img class="pull-left img-responsive" src="@Model.Image" width="100px" height="100px"/>
+                @Html.PropertyFor(x => x.Description)</p>
+            <p class="clearfix"><a class="btn btn-primary btn-lg " href="@Model.Url" role="button" target="_new">@Model.Button</a></p>
+        </div>
+    </div>
